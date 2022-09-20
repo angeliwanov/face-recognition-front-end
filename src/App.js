@@ -10,17 +10,17 @@ import Singin from './components/Signin/Signin';
 import Register from './components/Register/Register';
 
 
-// const particlesOptions = {
-//   particles: {
-//     number: {
-//       value: 100,
-//       density: {
-//         enable: true,
-//         value_area: 800
-//       }
-//     }
-//   }
-// }
+const particlesOptions = {
+  particles: {
+    number: {
+      value: 100,
+      density: {
+        enable: true,
+        value_area: 800
+      }
+    }
+  }
+}
 
 const initialState = {
   input: '',
@@ -119,9 +119,9 @@ class App extends Component {
     const {isSignedIn, imageURL, route, box} = this.state;
     return (
       <div className="App">
-        {/* <Particles className='particles'
+        <Particles className='particles'
           params={particlesOptions}
-        /> */}
+        />
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}/>
         { route === 'home' 
         ? <div> 
